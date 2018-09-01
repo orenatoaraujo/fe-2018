@@ -1,4 +1,4 @@
-# fe-2018
+# Implementação de “portal” para cadastro de identificadores de indivíduos em saúde.
 
 ## Integrantes
 

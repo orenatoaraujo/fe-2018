@@ -6,8 +6,10 @@ import { IdentificadorComponent } from './identificador/identificador.component'
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DadosDemograficosComponent } from './dados-demograficos/dados-demograficos.component';
 
 const appRoutes: Routes = [
+  { path: 'dados-demograficos', component: DadosDemograficosComponent },
   { path: 'identificador', component: IdentificadorComponent },
   { path: '', redirectTo: '/identificador', pathMatch: 'full' }
 ];
@@ -15,7 +17,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    IdentificadorComponent
+    IdentificadorComponent,
+    DadosDemograficosComponent
   ],
   imports: [
     BrowserModule,

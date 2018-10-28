@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Identificador } from './identificador.model';
+
 @Component({
   selector: 'app-identificador',
   templateUrl: './identificador.component.html',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IdentificadorComponent implements OnInit {
 
-  constructor() { }
+  identificador: Identificador;
 
-  ngOnInit() {
+  constructor(
+ 
+  ) {}
+
+  ngOnInit(): void {
+    this.identificador = new Identificador(
+      null, null, '', '', '', null,
+      null,'', '', null, '',  null,
+      null, null, null);
+  }
+
+  onSubmit(): void {
+    console.log('Inclusão de Identificador!');
   }
 
 }

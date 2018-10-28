@@ -1,8 +1,8 @@
 <div class="container">
 
   <form (ngSubmit)="onSubmit()" #identificadorForm="ngForm" novalidate>
-    <div class="form-row">
 
+    <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputDocumento">Documento</label>
         <select id="inputDocumento"
@@ -25,38 +25,8 @@
               [(ngModel)]="identificador.numero">
       </div>
     </div>
-    <div class="form-group">
-      <label for="inputDesignacao">Designação</label>
-      <input type="text" placeholder="Informe a designação deste identificador"
-          class="form-control"
-          #inputDesignacao='ngModel'
-          name="inputDesignacao"
-          [(ngModel)]="identificador.designacao">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-4">
-          <label for="inputArea">Área</label>
-          <input type="text" placeholder="Informe a área deste identificador"
-             class="form-control"
-             #inputArea="ngModel"
-             name="inputArea"
-             [(ngModel)]="identificador.area">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputEmissor">Emissor</label>
-        <input type="text" placeholder="Informe o emissor deste identificador"
-           class="form-control"
-           #inputEmissor="ngModel"
-           name="inputEmissor"
-           [(ngModel)]="identificador.emissor">
-      </div>
-      <div class="form-group col-md-4">
-          <label for="idData">Data</label>
-          <input type="text" class="form-control" id="idData" >
-        </div>
-      </div>
-      
-      <div *ngIf="identificador.documento == 1" class="form-row">
+
+    <div *ngIf="identificador.documento == 1" class="form-row">
         <div class="form-group col-md-2">
           <label for="iddocumentoCertidao">Certidão</label>
           <select id="iddocumentoCertidao" class="form-control">
@@ -170,7 +140,38 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success" >Salvar</button>
+    <div class="form-group">
+      <label for="inputDesignacao">Designação</label>
+      <input type="text" placeholder="Informe a designação deste identificador"
+          class="form-control"
+          #inputDesignacao='ngModel'
+          name="inputDesignacao"
+          [(ngModel)]="identificador.designacao">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+          <label for="inputArea">Área</label>
+          <input type="text" placeholder="Informe a área deste identificador"
+             class="form-control"
+             #inputArea="ngModel"
+             name="inputArea"
+             [(ngModel)]="identificador.area">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputEmissor">Emissor</label>
+        <input type="text" placeholder="Informe o emissor deste identificador"
+           class="form-control"
+           #inputEmissor="ngModel"
+           name="inputEmissor"
+           [(ngModel)]="identificador.emissor">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="idData">Data</label>
+        <input type="text" class="form-control" id="idData" >
+      </div>
+    </div>
+      
+    <button type="submit" class="btn btn-success" >Salvar</button>
 
   </form>
 </div>

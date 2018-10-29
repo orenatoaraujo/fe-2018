@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IdentificadorComponent } from './identificador/identificador.component';
 import { DadosDemograficosComponent } from './dados-demograficos/dados-demograficos.component';
 import { IndividuosComponent } from './individuos/individuos.component';
+import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
 
 const appRoutes: Routes = [
   { path: 'identificador', component: IdentificadorComponent },
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     IdentificadorComponent,
     DadosDemograficosComponent,
-    IndividuosComponent
+    IndividuosComponent,
+    ComunicacaoComponent
   ],
   imports: [
     BrowserModule,

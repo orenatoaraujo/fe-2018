@@ -17,9 +17,9 @@ export class IdentificadorComponent implements OnInit {
 
   ngOnInit(): void {
     this.identificador = new Identificador(
-      null, null, '', '', '', null,
-      null,'', '', null, '',  null,
-      null, null, null);
+      null, null, null, null, null,
+      null, null, null, null, null,
+      null, null, null, null, null);
   }
 
   onSubmit(): void {

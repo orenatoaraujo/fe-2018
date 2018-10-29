@@ -3,12 +3,12 @@
 <form (ngSubmit)="onSubmit()" #identificadorForm="ngForm" novalidate>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputDocumento">Documento</label>
-      <select id="inputDocumento"
+      <label for="inputTipo">Tipo</label>
+      <select id="inputTipo"
         class="form-control"
-        #inputDocumento='ngModel'
-        name='inputDocumento'
-        [(ngModel)]="identificador.documento">
+        #inputTipo='ngModel'
+        name='inputTipo'
+        [(ngModel)]="identificador.tipo">
         <option disabled selected value="null"> -- Selecione -- </option>
         <option value="1">Certidão</option>          
         <option value="2">CTPS</option>
@@ -25,23 +25,20 @@
     </div>
   </div>
 
-  <div *ngIf="identificador.documento == 1" class="form-row">
+  <div *ngIf="identificador.tipo == 1" class="form-row">
       <div class="form-group col-md-2">
         <label for="iddocumentoCertidao">Certidão</label>
         <select id="iddocumentoCertidao" class="form-control">
           <option disabled selected value="null"> -- Selecione -- </option>
-          <option value="1">Nascimento</option>
-          <option value="2">Casamento</option>
-          <option value="3">Óbito</option>
-          <option value="4">Protesto</option>
-          <option value="5">Imóvel</option>
-          <option value="6">Apostilamento</option>
+          <option value="N">Nascimento</option>
+          <option value="C">Casamento</option>
+          <option value="D">Divórcio</option>
         </select>
       </div>  
       
       <div class="form-group col-md-10">
       <label for="inputCartorio">Cartório</label>
-      <input type="text" placeholder="Informe o cartório da certidão"
+      <input type="text" placeholder="O nome do cartório que emitiu a certidão"
           class="form-control"   
           #inputCartorio="ngModel"
           name="inputCartorio"
@@ -49,10 +46,10 @@
     </div>
   </div>
 
-  <div *ngIf="identificador.documento == 1" class="form-row">
+  <div *ngIf="identificador.tipo == 1" class="form-row">
       <div class="form-group col-md-6">
           <label for="inputLivro">Livro</label>
-          <input type="text" placeholder="Informe o livro do cartório"
+          <input type="text" placeholder="Número do livro no qual foi feito o registro da certidão no cartório"
               class="form-control"   
               #inputLivro="ngModel"
               name="inputLivro"
@@ -60,7 +57,7 @@
       </div>  
       <div class="form-group col-md-2">
           <label for="inputFolha">Folha</label>
-          <input type="text" placeholder="Informe a folha do livro"
+          <input type="text" placeholder="Número da folha do livro no qual foi feito o registro da certidão no cartório"
               class="form-control"   
               #inputFolha="ngModel"
               name="inputFolha"
@@ -68,7 +65,7 @@
       </div>
       <div class="form-group col-md-4">
           <label for="inputTermo">Termo</label>
-          <input type="text" placeholder="Informe o termo do livro"
+          <input type="text" placeholder="Número da certidão constante no livro no qual foi lavrada a certidão no cartório"
               class="form-control"   
               #inputTermo="ngModel"
               name="inputTermo"
@@ -76,10 +73,10 @@
       </div>
     </div>  
 
-    <div *ngIf="identificador.documento == 2" class="form-row">
+    <div *ngIf="identificador.tipo == 2" class="form-row">
       <div class="form-group col-md-6">
           <label for="inputSerie">Serie</label>
-          <input type="text" placeholder="Informe a serie da CTPS"
+          <input type="text" placeholder="Número da série da CTPS"
               class="form-control"   
               #inputSerie="ngModel"
               name="inputSerie"
@@ -89,41 +86,41 @@
           <label for="idEstado">Estado</label>
           <select id="idEstado" class="form-control">
             <option disabled selected value="null"> -- Selecione -- </option>
-            <option value="11">Rondônia</option>
-            <option value="12">Acre</option>
-            <option value="13">Amazonas</option>
-            <option value="14">Roraima</option>
-            <option value="15">Pará</option>
-            <option value="16">Amapá</option>
-            <option value="17">Tocantins</option>
-            <option value="21">Maranhão</option>
-            <option value="22">Piauí</option>
-            <option value="23">Ceará</option>
-            <option value="24">Rio Grande do Norte</option>
-            <option value="25">Paraíba</option>
-            <option value="26">Pernambuco</option>
-            <option value="27">Alagoas</option>
-            <option value="28">Sergipe</option>
-            <option value="29">Bahia</option>
-            <option value="31">Minas Gerais</option>
-            <option value="32">Espírito Santo</option>
-            <option value="33">Rio de Janeiro</option>
-            <option value="35">São Paulo</option>
-            <option value="41">Paraná</option>
-            <option value="42">Santa Catarina</option>
-            <option value="43">Rio Grande do Sul</option>
-            <option value="50">Mato Grosso do Sul</option>
-            <option value="51">Mato Grosso</option>
-            <option value="52">Goiás</option>
-            <option value="53">Distrito Federal</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AM">Amazonas</option>
+            <option value="AP">Amapá</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="PR">Paraná</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SE">Sergipe</option>
+            <option value="SP">São Paulo</option>
+            <option value="TO">Tocantins</option>
           </select>
       </div>
     </div>    
 
-    <div *ngIf="identificador.documento == 3" class="form-row">
+    <div *ngIf="identificador.tipo == 3" class="form-row">
       <div class="form-group col-md-6">
           <label for="inputSecao">Seção</label>
-          <input type="text" placeholder="Informe a seção do título eleitoral"
+          <input type="text" placeholder="Número da seção eleitoral do título de eleitor"
               class="form-control"   
               #inputSecao="ngModel"
               name="inputSecao"
@@ -131,7 +128,7 @@
       </div>  
       <div class="form-group col-md-6">
           <label for="inputZona">Zona</label>
-          <input type="text" placeholder="Informe a zona do título eleitoral"
+          <input type="text" placeholder="Número da zona eleitoral do título de eleitor"
               class="form-control"   
               #inputZona="ngModel"
               name="inputZona"
@@ -141,7 +138,7 @@
 
   <div class="form-group">
     <label for="inputDesignacao">Designação</label>
-    <input type="text" placeholder="Informe a designação deste identificador"
+    <input type="text" placeholder="Número ou código atribuído a uma pessoa por uma organização"
         class="form-control"
         #inputDesignacao='ngModel'
         name="inputDesignacao"
@@ -149,16 +146,22 @@
   </div>
   <div class="form-row">
     <div class="form-group col-md-4">
-        <label for="inputArea">Área</label>
-        <input type="text" placeholder="Informe a área deste identificador"
-            class="form-control"
-            #inputArea="ngModel"
-            name="inputArea"
-            [(ngModel)]="identificador.area">
+        <label for="inputArea">Área Geográfica</label>
+        <select id="inputDocumento"
+          class="form-control"
+          #inputArea='ngModel'
+          name='inputArea'
+          [(ngModel)]="identificador.area">
+          <option disabled selected value="null"> -- Selecione -- </option>
+          <option value="1">Sujeito Local</option>          
+          <option value="2">Área, Região ou Distrito</option>
+          <option value="3">Estado, Província ou Território</option>
+          <option value="4">Nacional</option>
+        </select>
     </div>
     <div class="form-group col-md-4">
       <label for="inputEmissor">Emissor</label>
-      <input type="text" placeholder="Informe o emissor deste identificador"
+      <input type="text" placeholder="Organização que aloca uma designação do identificador de um indivíduo"
           class="form-control"
           #inputEmissor="ngModel"
           name="inputEmissor"
@@ -166,7 +169,17 @@
     </div>
     <div class="form-group col-md-4">
       <label for="idData">Data</label>
-      <input type="text" class="form-control" id="idData" >
+      <input type="text" placeholder="A data na qual foi emitido o documento de identificação do indivíduo"
+         class="form-control" id="idData" >
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+        <button type="submit" class="btn btn-success" >Salvar</button>
+    </div>
+  </div>
+
+  
+
 </form>

@@ -9,6 +9,7 @@ import { IdentificadorComponent } from './identificador/identificador.component'
 import { DadosDemograficosComponent } from './dados-demograficos/dados-demograficos.component';
 import { IndividuosComponent } from './individuos/individuos.component';
 import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
+import { ComunicacaoListaComponent } from './comunicacao/comunicacao-lista.component';
 
 const appRoutes: Routes = [
   { path: 'identificador', component: IdentificadorComponent },
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     IdentificadorComponent,
     DadosDemograficosComponent,
     IndividuosComponent,
-    ComunicacaoComponent
+    ComunicacaoComponent,
+    ComunicacaoListaComponent
   ],
   imports: [
     BrowserModule,

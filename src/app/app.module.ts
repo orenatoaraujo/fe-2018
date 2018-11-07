@@ -10,11 +10,13 @@ import { DadosDemograficosComponent } from './dados-demograficos/dados-demografi
 import { IndividuosComponent } from './individuos/individuos.component';
 import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
 import { ComunicacaoListaComponent } from './comunicacao/comunicacao-lista.component';
+import { NomesComponent } from './nomes/nomes.component';
 
 const appRoutes: Routes = [
   { path: 'identificador', component: IdentificadorComponent },
   { path: 'dados-demograficos', component: DadosDemograficosComponent },
   { path: 'individuos', component: IndividuosComponent },
+  { path: 'nomes', component: NomesComponent },
   { path: '', redirectTo: '/individuos', pathMatch: 'full' }
 ];
 
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     DadosDemograficosComponent,
     IndividuosComponent,
     ComunicacaoComponent,
-    ComunicacaoListaComponent
+    ComunicacaoListaComponent,
+    NomesComponent
   ],
   imports: [
     BrowserModule,

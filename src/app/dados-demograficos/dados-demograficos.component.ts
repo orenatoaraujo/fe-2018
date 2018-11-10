@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from '../services/database.service';
+import { DadosDemograficosService } from '../services/dados-demograficos.service';
 
 @Component({
   selector: 'app-dados-demograficos',
@@ -8,8 +8,10 @@ import { DatabaseService } from '../services/database.service';
 })
 export class DadosDemograficosComponent implements OnInit {
 
-  constructor(private database:DatabaseService) {
-    
+  constructor(private dadosDemograficosService:DadosDemograficosService) {
+    dadosDemograficosService.create({
+      name: 'Cacete de agulha'
+    });
   }
 
   ngOnInit() {

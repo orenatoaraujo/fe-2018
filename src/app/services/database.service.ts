@@ -1,32 +1,31 @@
 import { Injectable } from '@angular/core';
 import { v4 as uuid } from 'uuid';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class DatabaseService {
+export abstract class DatabaseService {
 
   private prefix:String = 'abnt_nbr_15985';
   private db:any = localStorage;
+  private table:String;
 
-  constructor() {
+  constructor(table:String) {
+    this.table = table;
   }
 
-  create(table:String, obj:any):any {
+  public create(obj:any):any {
     // find all local objects
-    let objs:any[] = this.findAll(table);
+    let objs:any[] = this.findAll();
 
     // generate id
     obj.id = uuid();
     objs.push(obj);
 
-    this.db.setItem(this.prefix + '_' + table, JSON.stringify(objs));
+    this.db.setItem(this.prefix + '_' + this.table, JSON.stringify(objs));
 
     return obj;
   }
 
-  update(table:String, obj:any) {
-    let objs:any[] = this.findAll(table);
+  update(obj:any) {
+    let objs:any[] = this.findAll();
     let objIndex = -1;
     objs.forEach((o, i) => {
       if(obj.id === o.id) {
@@ -41,11 +40,11 @@ export class DatabaseService {
 
     objs[objIndex] = obj;
 
-    this.db.setItem(this.prefix + '_' + table, JSON.stringify(objs));
+    this.db.setItem(this.prefix + '_' + this.table, JSON.stringify(objs));
   }
 
-  delete(table: String, id: String) {
-    let objs:any[] = this.findAll(table);
+  delete(id: String) {
+    let objs:any[] = this.findAll();
     let objIndex = -1;
     objs.forEach((o, i) => {
       if(id === o.id) {
@@ -60,15 +59,15 @@ export class DatabaseService {
 
     objs.splice(objIndex, objIndex + 1);
 
-    this.db.setItem(this.prefix + '_' + table, JSON.stringify(objs));
+    this.db.setItem(this.prefix + '_' + this.table, JSON.stringify(objs));
   }
 
-  findAll(table:String):any[] {
-    return JSON.parse(this.db.getItem(this.prefix + '_' + table)) || [];
+  findAll():any[] {
+    return JSON.parse(this.db.getItem(this.prefix + '_' + this.table)) || [];
   }
 
-  findById(table:String, id:String):any {
-    let objs:any[] = this.findAll(table);
+  findById(id:String):any {
+    let objs:any[] = this.findAll();
 
     let objFound = null;
     objs.forEach((obj) => {

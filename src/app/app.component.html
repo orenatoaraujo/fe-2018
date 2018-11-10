@@ -1,30 +1,9 @@
-<header id="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" routerLink="/">Indivíduo</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/identificador" routerLinkActive="active">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/dados-demograficos" routerLinkActive="active">Dados demográficos</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/endereco" routerLinkActive="active">Endereço</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<header>
+    <div class="container">
+        <h1>Individuos</h1>
+    </div>
 </header>
 
-<main id="main" class="container-fluid">
+<main id="main" class="container">
     <router-outlet></router-outlet>
 </main>

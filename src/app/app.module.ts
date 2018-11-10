@@ -13,14 +13,12 @@ import { ComunicacaoListaComponent } from './comunicacao/comunicacao-lista.compo
 import { NomesComponent } from './nomes/nomes.component';
 import { EnderecoComponent } from './endereco/endereco.component';
 import { NomeListaComponent } from './nome-lista/nome-lista.component';
+import { IndividuosListaComponent } from './individuos-lista/individuos-lista.component';
+import { IndividuoComponent } from './individuo/individuo.component';
 
 const appRoutes: Routes = [
-  { path: 'endereco', component: EnderecoComponent },
-  { path: 'dados-demograficos', component: DadosDemograficosComponent },
-  { path: 'identificador', component: IdentificadorComponent },
-  { path: 'dados-demograficos', component: DadosDemograficosComponent },
-  { path: 'individuos', component: IndividuosComponent },
-  { path: 'nomes', component: NomeListaComponent },
+  { path: 'individuos', component: IndividuosListaComponent },
+  { path: 'individuo', component: IndividuoComponent },
   { path: '', redirectTo: '/individuos', pathMatch: 'full' }
 ];
 
@@ -34,7 +32,9 @@ const appRoutes: Routes = [
     ComunicacaoListaComponent,
     NomesComponent,
     EnderecoComponent,
-    NomeListaComponent
+    NomeListaComponent,
+    IndividuosListaComponent,
+    IndividuoComponent
   ],
   imports: [
     BrowserModule,

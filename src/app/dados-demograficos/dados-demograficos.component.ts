@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Sexo } from '../sexo.enum';
+import { DatabaseService } from '../services/database.service';
 
 @Component({
   selector: 'app-dados-demograficos',
@@ -8,7 +8,7 @@ import { Sexo } from '../sexo.enum';
 })
 export class DadosDemograficosComponent implements OnInit {
 
-  constructor() {
+  constructor(private database:DatabaseService) {
     
   }
 

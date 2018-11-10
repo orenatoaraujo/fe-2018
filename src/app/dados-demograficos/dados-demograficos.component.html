@@ -1,19 +1,220 @@
-<h2>Dados demográficos</h2>
-
 <form>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label>Mãe</label>
-        <input type="text" class="form-control">
+  <fieldset>
+    <legend>Dados demográficos</legend>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Sexo</label>
+
+          <div class="clearfix">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Masculino</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Feminino</label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label>Pai</label>
-        <input type="text" class="form-control">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Mãe</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Pai</label>
+          <input type="text" class="form-control">
+        </div>
       </div>
     </div>
-  </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Situação familiar</label>
+          
+          <div class="clearfix">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Solteiro</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Casado</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Divorsiado</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Etnia</label>
+          <div class="clearfix">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Negro</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Caucasiano</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Indígena</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Comentário</label>
+          <textarea rows="3" class="form-control"></textarea>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Fonte de notificação de óbito</label>
+          <textarea rows="3" class="form-control"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label>Nascimento pluralidade</label>
+          <textarea rows="3" class="form-control"></textarea>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label>Nascimento ordem</label>
+          <textarea rows="3" class="form-control"></textarea>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label>Nascimento seguimento</label>
+          <textarea rows="3" class="form-control"></textarea>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Nacionalidade</legend>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Município</label>
+          <input type="text" rows="3" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Estado</label>
+          <input type="text" rows="3" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>País</label>
+          <input type="text" rows="3" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Data de entrada no país</label>
+          <input type="text" rows="3" class="form-control">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Nascimento</legend>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Data</label>
+          <input type="text" rows="3" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Acurácia</label>
+          <div class="clearfix">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Alta</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Baixa</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Óbito</legend>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Data</label>
+          <input type="text" rows="3" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Acurácia</label>
+          <div class="clearfix">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Alta</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Baixa</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
 </form>

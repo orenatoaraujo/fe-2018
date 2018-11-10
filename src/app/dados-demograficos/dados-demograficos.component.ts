@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Sexo } from '../sexo.enum';
 
 @Component({
   selector: 'app-dados-demograficos',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadosDemograficosComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    
+  }
 
   ngOnInit() {
   }

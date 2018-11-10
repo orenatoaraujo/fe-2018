@@ -11,8 +11,11 @@ import { IndividuosComponent } from './individuos/individuos.component';
 import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
 import { ComunicacaoListaComponent } from './comunicacao/comunicacao-lista.component';
 import { NomesComponent } from './nomes/nomes.component';
+import { EnderecoComponent } from './endereco/endereco.component';
 
 const appRoutes: Routes = [
+  { path: 'endereco', component: EnderecoComponent },
+  { path: 'dados-demograficos', component: DadosDemograficosComponent },
   { path: 'identificador', component: IdentificadorComponent },
   { path: 'dados-demograficos', component: DadosDemograficosComponent },
   { path: 'individuos', component: IndividuosComponent },
@@ -28,7 +31,8 @@ const appRoutes: Routes = [
     IndividuosComponent,
     ComunicacaoComponent,
     ComunicacaoListaComponent,
-    NomesComponent
+    NomesComponent,
+    EnderecoComponent
   ],
   imports: [
     BrowserModule,

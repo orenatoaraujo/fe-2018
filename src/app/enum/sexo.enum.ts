@@ -1,4 +1,6 @@
+import { ValueTransformer } from "@angular/compiler/src/util";
+
 export enum Sexo {
-    MASCULINO = 1,
-    FEMININO = 2
+    MASCULINO,
+    FEMININO
 }

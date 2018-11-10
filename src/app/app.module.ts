@@ -12,6 +12,7 @@ import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
 import { ComunicacaoListaComponent } from './comunicacao/comunicacao-lista.component';
 import { NomesComponent } from './nomes/nomes.component';
 import { EnderecoComponent } from './endereco/endereco.component';
+import { NomeListaComponent } from './nome-lista/nome-lista.component';
 
 const appRoutes: Routes = [
   { path: 'endereco', component: EnderecoComponent },
@@ -19,7 +20,7 @@ const appRoutes: Routes = [
   { path: 'identificador', component: IdentificadorComponent },
   { path: 'dados-demograficos', component: DadosDemograficosComponent },
   { path: 'individuos', component: IndividuosComponent },
-  { path: 'nomes', component: NomesComponent },
+  { path: 'nomes', component: NomeListaComponent },
   { path: '', redirectTo: '/individuos', pathMatch: 'full' }
 ];
 
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     ComunicacaoComponent,
     ComunicacaoListaComponent,
     NomesComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    NomeListaComponent
   ],
   imports: [
     BrowserModule,

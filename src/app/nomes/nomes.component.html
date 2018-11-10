@@ -1,48 +1,121 @@
-<h2>Nomes</h2>
-<br>
-<div class="row">
-    <div class="col-md-2">
-        <label>Titulo</label>
-        <input class="form-control" id="txtTitulo">
-    </div>
-    <div class="col-md-4">
-        <label>Nome</label>
-        <input class="form-control" id="txtNome">
-    </div>
-</div>
+<form>
+    <fieldset>
+        <h2>Nomes</h2>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Titulo</label>
+                    <input type="text" class="form-control" id="txtTitulo">
+                </div>
+            </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <label>Sobrenome</label>
-        <input class="form-control" id="txtSobrenome">
-    </div>
-    <div class="col-md-2">
-        <label>Sufixos</label>
-        <input class="form-control" id="txtSufixo">
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-3">
-        <label>Data Inicial</label>
-        <input type="date" class="form-control" id="txtDtInicial">
-    </div>
-    <div class="col-md-3">
-        <label>Data Final</label>
-        <input type="date" class="form-control" id="txtDtFinal">
-    </div>
-    <div class="col-md-3">
-        <label for="">Tipo de Utilização</label>
-        <div class="form-group">
-          <select class="form-control" id="txtUtil">
-            <option>Relátorio (R)</option>
-            <option>Nome de recém-nascido (N)</option>
-            <option>Nome profissional ou comercial (C)</option>
-            <option>Nome de solteiro, nome de nascimento ou nome original (S)</option>
-            <option>Nome registrado (L)</option>
-            <option>Outro nome (alias) (O)</option>
-          </select>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" class="form-control" id="txtNome" required>
+                </div>
+            </div>
         </div>
-    </div>
 
-</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Sobrenome</label>
+                    <input type="text" class="form-control" id="txtSobrenome" required>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Sufixos</label>
+                    <input type="text" class="form-control" id="txtSufixo">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Data Inicial</label>
+                    <input type="date" class="form-control" id="txtDtInicial" required>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Data Final</label>
+                    <input type="date" class="form-control" id="txtDtFinal" required>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="">Tipo de Utilização</label>
+                    <select class="form-control" id="txtUtil" required>
+                        <option>Relátorio (R)</option>
+                        <option>Nome de recém-nascido (N)</option>
+                        <option>Nome profissional ou comercial (C)</option>
+                        <option>Nome de solteiro, nome de nascimento ou nome original (S)</option>
+                        <option>Nome registrado (L)</option>
+                        <option>Outro nome (alias) (O)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <hr class="style2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Nome Completo</label>
+                    <input type="text" class="form-control" id="txtNomeCompleto" placeholder="Preencha todos os campos..">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-success">Salvar</button>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped table-hover">
+
+                    <thead>
+                        <tr>
+                            <th>Nome Completo</th>
+                            <th>Dt. Inicial</th>
+                            <th>Dt. Final</th>
+                            <th>Utilização</th>
+                            <th>Preferido</th>
+                            
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngIf="comunicacoes.length == 0">
+                            <td colspan="4" align="center">Nenhum registro encontrado.</td>
+                        </tr>
+                        <tr *ngFor="let c of comunicacoes">
+                            <td>{{ c.meio }}</td>
+                            <td>{{ c.preferencia }}</td>
+                            <td>{{ c.detalhe }}</td>
+                            <td>{{ c.uso }}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </fieldset>
+</form>

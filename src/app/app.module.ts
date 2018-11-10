@@ -9,7 +9,7 @@ import { IdentificadorComponent } from './identificador/identificador.component'
 import { DadosDemograficosComponent } from './dados-demograficos/dados-demograficos.component';
 import { IndividuosComponent } from './individuos/individuos.component';
 import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
-import { ComunicacaoListaComponent } from './comunicacao/comunicacao-lista.component';
+import { ComunicacaoListaComponent } from './comunicacao-lista/comunicacao-lista.component';
 import { NomesComponent } from './nomes/nomes.component';
 import { EnderecoComponent } from './endereco/endereco.component';
 import { NomeListaComponent } from './nome-lista/nome-lista.component';

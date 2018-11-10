@@ -33,14 +33,19 @@ export abstract class DatabaseService {
         return ;
       }
     });
-
     if(objIndex < 0) {
       throw 'Object not found!';
     }
-
     objs[objIndex] = obj;
-
     this.db.setItem(this.prefix + '_' + this.table, JSON.stringify(objs));
+  }
+
+  createOrUpdate(obj:any) {
+    if(obj.id != null) {
+      this.update(obj);
+    } else {
+      this.create(obj);
+    }
   }
 
   delete(id: String) {

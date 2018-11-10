@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <div class="form-group">
                     <label>Nome</label>
                     <input type="text" class="form-control" id="txtNome" required>
@@ -32,6 +32,22 @@
                     <input type="text" class="form-control" id="txtSufixo">
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="">Tipo de Utilização</label>
+                    <select class="form-control" id="txtUtil" required>
+                        <option>Relátorio (R)</option>
+                        <option>Nome de recém-nascido (N)</option>
+                        <option>Nome profissional ou comercial (C)</option>
+                        <option>Nome de solteiro, nome de nascimento ou nome original (S)</option>
+                        <option>Nome registrado (L)</option>
+                        <option>Outro nome (alias) (O)</option>
+                    </select>
+                </div>
+            </div>
+
+
         </div>
 
         <div class="row">
@@ -49,17 +65,19 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <label>
+                    Preferencial
+                </label>
                 <div class="form-group">
-                    <label for="">Tipo de Utilização</label>
-                    <select class="form-control" id="txtUtil" required>
-                        <option>Relátorio (R)</option>
-                        <option>Nome de recém-nascido (N)</option>
-                        <option>Nome profissional ou comercial (C)</option>
-                        <option>Nome de solteiro, nome de nascimento ou nome original (S)</option>
-                        <option>Nome registrado (L)</option>
-                        <option>Outro nome (alias) (O)</option>
-                    </select>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rdSim" value="option1">
+                        <label class="form-check-label" for="rdSim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rdNao" value="option2">
+                        <label class="form-check-label" for="rdNao">Não</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,19 +115,20 @@
                             <th>Dt. Final</th>
                             <th>Utilização</th>
                             <th>Preferido</th>
-                            
+
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr *ngIf="comunicacoes.length == 0">
+                        <tr *ngIf="nomes.length == 0">
                             <td colspan="4" align="center">Nenhum registro encontrado.</td>
                         </tr>
-                        <tr *ngFor="let c of comunicacoes">
-                            <td>{{ c.meio }}</td>
-                            <td>{{ c.preferencia }}</td>
-                            <td>{{ c.detalhe }}</td>
-                            <td>{{ c.uso }}</td>
+                        <tr *ngFor="let n of nomes">
+                            <td>{{ n.nome }}</td>
+                            <td>{{ n.dtInicial }}</td>
+                            <td>{{ n.dtFinal }}</td>
+                            <td>{{ n.utilizacao }}</td>
+                            <td>{{ n.preferido }}</td>
                         </tr>
                     </tbody>
 

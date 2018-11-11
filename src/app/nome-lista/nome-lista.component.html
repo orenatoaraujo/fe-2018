@@ -1,24 +1,25 @@
 <div>
     <app-nomes></app-nomes>
-    <br>
+
+    <div class="separator"></div>
+
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-striped table-hover">
-
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Nome Completo</th>
-                        <th>Dt. Inicial</th>
-                        <th>Dt. Final</th>
+                        <th class="text-center">Data Inicial</th>
+                        <th class="text-center">Data Final</th>
                         <th>Utilização</th>
                         <th>Preferido</th>
-
+                        <th class="text-center">Ações</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr *ngIf="nomes.length == 0">
-                        <td colspan="6" align="center">Nenhum registro encontrado.</td>
+                        <td colspan="6" class="text-center">Nenhum nome adicionado.</td>
                     </tr>
                     <tr *ngFor="let n of nomes">
                         <td>{{ n.nome }}</td>
@@ -28,7 +29,6 @@
                         <td>{{ n.preferido }}</td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
     </div>

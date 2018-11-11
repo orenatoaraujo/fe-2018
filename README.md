@@ -6,9 +6,17 @@ Implementar “portal” para cadastro de identificadores de indivíduos em saú
 
 ## Construído com
 
-## Instalando
+* [Angular 6](https://angular.io/)
 
-## Visualizando o aplicativo
+## Instalação e execução
+
+### Instalar
+* `npm install`
+
+### Executar
+* `npm start`
+
+## Visualizar o aplicativo
 
 Para visualizar o aplicativo em execução, visite [http://localhost:4200/individuos](http://localhost:4200/individuos) em seu navegador
 

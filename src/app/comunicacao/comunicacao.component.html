@@ -18,14 +18,15 @@
         <div class="row">
             <div class="form-group col-md-12">
                 <label for="inputDetalhe">Detalhe</label>
-                <textarea type="text" class="form-control" #inputDetalhe="ngModel" name="inputDetalhe" [(ngModel)]="comunicacao.detalhe" rows="3"></textarea>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <button type="submit" class="btn btn-success pull-right">Adicionar</button>
+                <textarea type="text" class="form-control" #inputDetalhe="ngModel" name="inputDetalhe" [(ngModel)]="comunicacao.detalhe"
+                    rows="3"></textarea>
             </div>
         </div>
     </fieldset>
+
+    <div class="row">
+        <div class="col-12">
+            <button type="submit" class="btn btn-success pull-right">Adicionar</button>
+        </div>
+    </div>
 </form>

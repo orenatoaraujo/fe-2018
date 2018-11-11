@@ -7,10 +7,11 @@ Implementar “portal” para cadastro de identificadores de indivíduos em saú
 ## Construído com
 
 * [Angular 6](https://angular.io/)
+* [Bootstrap 4](https://getbootstrap.com/)
 
-## Instalação e execução
+## Instalação de dependências e execução
 
-### Instalar
+### Instalar dependências
 * `npm install`
 
 ### Executar

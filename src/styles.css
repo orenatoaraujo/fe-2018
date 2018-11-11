@@ -54,11 +54,26 @@ html body {
 }
 
 
+/* Main */
+
+#main {
+    margin-bottom: 15px;
+}
+
+
 /* page-title */
 
 .page-title {
     font-size: 22px;
     margin: 0;
+}
+
+
+/* sub-title-page */
+
+.sub-title-page {
+    font-size: 18px;
+    margin: 0 0 15px;
 }
 
 
@@ -68,4 +83,11 @@ main .form-control,
 main .btn {
     font-size: 13px;
     line-height: 1.2em;
+}
+
+
+/* Margins */
+
+.mt-10 {
+    margin-top: 10px;
 }

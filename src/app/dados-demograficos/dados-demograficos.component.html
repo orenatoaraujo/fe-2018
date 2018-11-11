@@ -1,28 +1,6 @@
 <form>
   <fieldset>
-    <legend>Dados demográficos</legend>
-
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="form-group">
-          <label>Sexo</label>
-
-          <div class="clearfix">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="sexo-masculino" 
-                name="dadosDemograficos.sexo" [(ngModel)]="dadosDemograficos.sexo" [value]="sexoMasculino">
-              <label class="form-check-label" for="sexo-masculino">Masculino</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="sexo-feminino" 
-                name="dadosDemograficos.sexo" [(ngModel)]="dadosDemograficos.sexo" [value]="sexoFeminino">
-              <label class="form-check-label" for="sexo-feminino">Feminino</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <legend class="sub-title-page">Dados demográficos</legend>
 
     <div class="row">
       <div class="col-sm-6">
@@ -41,6 +19,32 @@
     </div>
 
     <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Sexo</label>
+
+          <select class="form-control" name="dadosDemograficos.sexo" [(ngModel)]="dadosDemograficos.sexo">
+            <option [value]="sexoMasculino">
+              Masculino
+            </option>
+            <option [value]="sexoFeminino">
+              Feminino
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Raça/cor</label>
+          <select class="form-control" name="dadosDemograficos.raca" [(ngModel)]="dadosDemograficos.raca">
+            <option [value]="raca.id" *ngFor="let raca of racaList">
+              {{ raca.title }}
+            </option>
+          </select>
+        </div>
+      </div>
+
       <div class="col-sm-6">
         <div class="form-group">
           <label>Situação familiar</label>
@@ -51,33 +55,20 @@
           </select>
         </div>
       </div>
-
-      <div class="col-sm-6">
-        <div class="form-group">
-          <label>Raça/cor</label>
-          <select class="form-control" name="dadosDemograficos.raca" [(ngModel)]="dadosDemograficos.raca">
-            <option [value]="raca.id" *ngFor="let raca of racaList">
-              {{ raca.title }}
-            </option>
-          </select>
-        </div>
-      </div>
     </div>
 
     <div class="row">
       <div class="col-sm-6">
         <div class="form-group">
           <label>Comentário</label>
-          <textarea rows="3" class="form-control" 
-            name="dadosDemograficos.comentario" [(ngModel)]="dadosDemograficos.comentario"></textarea>
+          <textarea rows="3" class="form-control" name="dadosDemograficos.comentario" [(ngModel)]="dadosDemograficos.comentario"></textarea>
         </div>
       </div>
 
       <div class="col-sm-6">
         <div class="form-group">
           <label>Fonte de notificação de óbito</label>
-          <textarea rows="3" class="form-control"
-            name="dadosDemograficos.obitoFonte" [(ngModel)]="dadosDemograficos.obitoFonte"></textarea>
+          <textarea rows="3" class="form-control" name="dadosDemograficos.obitoFonte" [(ngModel)]="dadosDemograficos.obitoFonte"></textarea>
         </div>
       </div>
     </div>
@@ -86,92 +77,88 @@
       <div class="col-sm-4">
         <div class="form-group">
           <label>Nascimento pluralidade</label>
-          <textarea rows="3" class="form-control"
-            name="dadosDemograficos.nascimentoPluralidade" [(ngModel)]="dadosDemograficos.nascimentoPluralidade"></textarea>
+          <textarea rows="3" class="form-control" name="dadosDemograficos.nascimentoPluralidade" [(ngModel)]="dadosDemograficos.nascimentoPluralidade"></textarea>
         </div>
       </div>
 
       <div class="col-sm-4">
         <div class="form-group">
           <label>Nascimento ordem</label>
-          <textarea rows="3" class="form-control"
-            name="dadosDemograficos.nascimentoOrdem" [(ngModel)]="dadosDemograficos.nascimentoOrdem"></textarea>
+          <textarea rows="3" class="form-control" name="dadosDemograficos.nascimentoOrdem" [(ngModel)]="dadosDemograficos.nascimentoOrdem"></textarea>
         </div>
       </div>
 
       <div class="col-sm-4">
         <div class="form-group">
           <label>Nascimento seguimento</label>
-          <textarea rows="3" class="form-control"
-            name="dadosDemograficos.nascimentoSeguimento" [(ngModel)]="dadosDemograficos.nascimentoSeguimento"></textarea>
+          <textarea rows="3" class="form-control" name="dadosDemograficos.nascimentoSeguimento" [(ngModel)]="dadosDemograficos.nascimentoSeguimento"></textarea>
         </div>
       </div>
     </div>
   </fieldset>
 
+  <hr>
+
   <fieldset>
-    <legend>Nacionalidade</legend>
+    <legend class="sub-title-page">Nacionalidade</legend>
 
     <div class="row">
       <div class="col-sm-3">
         <div class="form-group">
           <label>Município</label>
-          <input type="text" class="form-control"
-            name="dadosDemograficos.municipio" [(ngModel)]="dadosDemograficos.municipio">
+          <input type="text" class="form-control" name="dadosDemograficos.municipio" [(ngModel)]="dadosDemograficos.municipio">
         </div>
       </div>
 
       <div class="col-sm-3">
         <div class="form-group">
           <label>Estado</label>
-          <input type="text" class="form-control"
-            name="dadosDemograficos.estado" [(ngModel)]="dadosDemograficos.estado">
+          <input type="text" class="form-control" name="dadosDemograficos.estado" [(ngModel)]="dadosDemograficos.estado">
         </div>
       </div>
 
       <div class="col-sm-3">
         <div class="form-group">
           <label>País</label>
-          <input type="text" class="form-control"
-            name="dadosDemograficos.pais" [(ngModel)]="dadosDemograficos.pais">
+          <input type="text" class="form-control" name="dadosDemograficos.pais" [(ngModel)]="dadosDemograficos.pais">
         </div>
       </div>
 
       <div class="col-sm-3">
         <div class="form-group">
           <label>Data de entrada no país</label>
-          <input type="text" class="form-control"
-            name="dadosDemograficos.dataEntradaPais" [(ngModel)]="dadosDemograficos.dataEntradaPais">
+          <input type="date" class="form-control" name="dadosDemograficos.dataEntradaPais" [(ngModel)]="dadosDemograficos.dataEntradaPais">
         </div>
       </div>
     </div>
   </fieldset>
 
+  <hr>
+
   <fieldset>
-    <legend>Nascimento</legend>
+    <legend class="sub-title-page">Nascimento</legend>
 
     <div class="row">
       <div class="col-sm-3">
         <div class="form-group">
           <label>Data</label>
-          <input type="datetime-local" class="form-control"
-            name="dadosDemograficos.nascimento" [(ngModel)]="dadosDemograficos.nascimento">
+          <input type="date" class="form-control" name="dadosDemograficos.nascimento" [(ngModel)]="dadosDemograficos.nascimento">
         </div>
       </div>
 
       <div class="col-sm-3">
         <div class="form-group">
           <label>Acurácia</label>
-          <div class="clearfix">
+          <div class="clearfix mt-10">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="nascimento-acuracia-alta" 
-                name="dadosDemograficos.nascimentoAcuracia" [(ngModel)]="dadosDemograficos.nascimentoAcuracia" value="alta">
+              <input class="form-check-input" type="radio" id="nascimento-acuracia-alta" name="dadosDemograficos.nascimentoAcuracia"
+                [(ngModel)]="dadosDemograficos.nascimentoAcuracia" value="alta">
               <label class="form-check-label" for="nascimento-acuracia-alta">Alta</label>
             </div>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="nascimento-acuracia-baixa" 
-                name="dadosDemograficos.nascimentoAcuracia" [(ngModel)]="dadosDemograficos.nascimentoAcuracia" value="baixa">
+              <input class="form-check-input" type="radio" id="nascimento-acuracia-baixa" name="dadosDemograficos.nascimentoAcuracia"
+                [(ngModel)]="dadosDemograficos.nascimentoAcuracia" value="baixa">
               <label class="form-check-label" for="nascimento-acuracia-baixa">Baixa</label>
             </div>
           </div>
@@ -180,31 +167,32 @@
     </div>
   </fieldset>
 
+  <hr>
+
   <fieldset>
-    <legend>Óbito</legend>
+    <legend class="sub-title-page">Óbito</legend>
 
     <div class="row">
       <div class="col-sm-3">
         <div class="form-group">
           <label>Data</label>
-          <input type="datetime-local" rows="3" class="form-control"
-            name="dadosDemograficos.obito" [(ngModel)]="dadosDemograficos.obito">
+          <input type="date" rows="3" class="form-control" name="dadosDemograficos.obito" [(ngModel)]="dadosDemograficos.obito">
         </div>
       </div>
 
       <div class="col-sm-3">
         <div class="form-group">
           <label>Acurácia</label>
-          <div class="clearfix">
+          <div class="clearfix mt-10">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="obito-acuracia-alta" 
-                name="dadosDemograficos.obitoAcuracia" [(ngModel)]="dadosDemograficos.obitoAcuracia" value="alta">
+              <input class="form-check-input" type="radio" id="obito-acuracia-alta" name="dadosDemograficos.obitoAcuracia"
+                [(ngModel)]="dadosDemograficos.obitoAcuracia" value="alta">
               <label class="form-check-label" for="obito-acuracia-alta">Alta</label>
             </div>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="obito-acuracia-baixa" 
-                name="dadosDemograficos.obitoAcuracia" [(ngModel)]="dadosDemograficos.obitoAcuracia" value="baixa">
+              <input class="form-check-input" type="radio" id="obito-acuracia-baixa" name="dadosDemograficos.obitoAcuracia"
+                [(ngModel)]="dadosDemograficos.obitoAcuracia" value="baixa">
               <label class="form-check-label" for="obito-acuracia-baixa">Baixa</label>
             </div>
           </div>
@@ -212,8 +200,4 @@
       </div>
     </div>
   </fieldset>
-
-  <div class="clearfix">
-    <button type="button" class="btn btn-success" (click)="save(dadosDemograficos)">Salvar</button>
-  </div>
 </form>

@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IdentificadorComponent } from './identificador/identificador.component';
 import { DadosDemograficosComponent } from './dados-demograficos/dados-demograficos.component';
-import { IndividuosComponent } from './individuos/individuos.component';
 import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
 import { ComunicacaoListaComponent } from './comunicacao-lista/comunicacao-lista.component';
 import { NomesComponent } from './nomes/nomes.component';
@@ -15,6 +14,7 @@ import { EnderecoComponent } from './endereco/endereco.component';
 import { NomeListaComponent } from './nome-lista/nome-lista.component';
 import { IndividuosListaComponent } from './individuos-lista/individuos-lista.component';
 import { IndividuoComponent } from './individuo/individuo.component';
+import { HeaderComponent } from './partials/header/header.component';
 
 const appRoutes: Routes = [
   { path: 'individuos', component: IndividuosListaComponent },
@@ -27,14 +27,14 @@ const appRoutes: Routes = [
     AppComponent,
     IdentificadorComponent,
     DadosDemograficosComponent,
-    IndividuosComponent,
     ComunicacaoComponent,
     ComunicacaoListaComponent,
     NomesComponent,
     EnderecoComponent,
     NomeListaComponent,
     IndividuosListaComponent,
-    IndividuoComponent
+    IndividuoComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,25 +1,21 @@
-<div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nome</th>
-      </tr>
-    </thead>
+<app-header></app-header>
 
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Danylo</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Brenicio</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Renato</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<main id="main" class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <div class="form-filter-patient-container form-group">
+        <label>RG ou CPF do paciete:</label>
+        <div class="form-filter-patient-field">
+          <input type="text" class="form-control" placeholder="Pesquisar paciente..." [(ngModel)]="pacienteFilter" />
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-success" [routerLink]="['/individuo']">
+          <i class="fa fa-user-plus"></i> Novo paciente
+        </button>
+      </div>
+    </div>
+  </div>
+</main>

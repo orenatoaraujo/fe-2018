@@ -1,36 +1,40 @@
-<nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-nomes" data-toggle="tab" href="#tab-nomes" role="tab" aria-controls="nav-profile"
-            aria-selected="true">Nomes</a>
+<app-header></app-header>
 
-        <a class="nav-item nav-link" id="nav-dados-demograficos" data-toggle="tab" href="#tab-dados-demograficos"
-            role="tab" aria-controls="nav-home" aria-selected="false">Dados demográficos</a>
+<main id="main" class="container">
+    <nav id="nav">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-nomes" data-toggle="tab" href="#tab-nomes" role="tab"
+                aria-controls="nav-profile" aria-selected="true">Nomes</a>
 
-        <a class="nav-item nav-link" id="nav-identificador" data-toggle="tab" href="#tab-identificador" role="tab"
-            aria-controls="nav-contact" aria-selected="false">Identificador</a>
+            <a class="nav-item nav-link" id="nav-dados-demograficos" data-toggle="tab" href="#tab-dados-demograficos"
+                role="tab" aria-controls="nav-home" aria-selected="false">Dados demográficos</a>
 
-        <a class="nav-item nav-link" id="nav-comunicacao" data-toggle="tab" href="#tab-comunicacao" role="tab"
-            aria-controls="nav-contact" aria-selected="false">Comunicação</a>
+            <a class="nav-item nav-link" id="nav-identificador" data-toggle="tab" href="#tab-identificador" role="tab"
+                aria-controls="nav-contact" aria-selected="false">Identificador</a>
 
-        <a class="nav-item nav-link" id="nav-endereco" data-toggle="tab" href="#tab-endereco" role="tab" aria-controls="nav-profile"
-            aria-selected="false">Endereço</a>
-    </div>
-</nav>
+            <a class="nav-item nav-link" id="nav-comunicacao" data-toggle="tab" href="#tab-comunicacao" role="tab"
+                aria-controls="nav-contact" aria-selected="false">Comunicação</a>
 
-<div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="tab-nomes" role="tabpanel" aria-labelledby="nav-nomes">
-        <app-nomes></app-nomes>
+            <a class="nav-item nav-link" id="nav-endereco" data-toggle="tab" href="#tab-endereco" role="tab"
+                aria-controls="nav-profile" aria-selected="false">Endereço</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="tab-nomes" role="tabpanel" aria-labelledby="nav-nomes">
+            <app-nomes></app-nomes>
+        </div>
+        <div class="tab-pane fade" id="tab-dados-demograficos" role="tabpanel" aria-labelledby="nav-dados-demograficos">
+            <app-dados-demograficos></app-dados-demograficos>
+        </div>
+        <div class="tab-pane fade" id="tab-identificador" role="tabpanel" aria-labelledby="nav-identificador">
+            <app-identificador></app-identificador>
+        </div>
+        <div class="tab-pane fade" id="tab-comunicacao" role="tabpanel" aria-labelledby="nav-comunicacao">
+            <app-comunicacao-lista></app-comunicacao-lista>
+        </div>
+        <div class="tab-pane fade" id="tab-endereco" role="tabpanel" aria-labelledby="nav-endereco">
+            <app-endereco></app-endereco>
+        </div>
     </div>
-    <div class="tab-pane fade" id="tab-dados-demograficos" role="tabpanel" aria-labelledby="nav-dados-demograficos">
-        <app-dados-demograficos></app-dados-demograficos>
-    </div>
-    <div class="tab-pane fade" id="tab-identificador" role="tabpanel" aria-labelledby="nav-identificador">
-        <app-identificador></app-identificador>
-    </div>
-    <div class="tab-pane fade" id="tab-comunicacao" role="tabpanel" aria-labelledby="nav-comunicacao">
-        <app-comunicacao-lista></app-comunicacao-lista>
-    </div>
-    <div class="tab-pane fade" id="tab-endereco" role="tabpanel" aria-labelledby="nav-endereco">
-        <app-endereco></app-endereco>
-    </div>
-</div>
+</main>

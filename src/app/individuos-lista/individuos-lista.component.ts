@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndividuosListaComponent implements OnInit {
 
+  public pacienteFilter:String = '';
+
   constructor() { }
 
   ngOnInit() {

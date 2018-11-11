@@ -1,0 +1,20 @@
+#main {
+    margin-top: 60px;
+}
+
+
+.form-filter-patient-field {
+    position: relative;
+}
+
+
+.form-filter-patient-field input {
+    padding-right: 36px;
+}
+
+
+.form-filter-patient-field .fa-search {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}

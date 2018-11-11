@@ -15,6 +15,8 @@ import { NomeListaComponent } from './nome-lista/nome-lista.component';
 import { IndividuosListaComponent } from './individuos-lista/individuos-lista.component';
 import { IndividuoComponent } from './individuo/individuo.component';
 import { HeaderComponent } from './partials/header/header.component';
+import { IdentificadorListaComponent } from './identificador-lista/identificador-lista.component';
+import { EnderecoListaComponent } from './endereco-lista/endereco-lista.component';
 
 const appRoutes: Routes = [
   { path: 'individuos', component: IndividuosListaComponent },
@@ -34,7 +36,9 @@ const appRoutes: Routes = [
     NomeListaComponent,
     IndividuosListaComponent,
     IndividuoComponent,
-    HeaderComponent
+    HeaderComponent,
+    IdentificadorListaComponent,
+    EnderecoListaComponent
   ],
   imports: [
     BrowserModule,

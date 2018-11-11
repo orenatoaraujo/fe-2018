@@ -1,47 +1,36 @@
-<h2>Comunicação</h2>
-
 <form (ngSubmit)="createOrUpdate()" #identificadorForm="ngForm" novalidate>
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label for="inputMeio">Meio</label>
-            <input type="text" placeholder="Informe o meio de comunicação"
-                class="form-control"
-                #inputMeio="ngModel"
-                name="inputMeio"
-                [(ngModel)]="comunicacao.meio">
+    <fieldset>
+        <legend class="sub-title-page">Comunicação</legend>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputMeio">Meio</label>
+                <input type="text" placeholder="Informe o meio de comunicação" class="form-control" #inputMeio="ngModel"
+                    name="inputMeio" [(ngModel)]="comunicacao.meio">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPreferencia" class="form-control-label">Preferência</label>
+                <input type="text" placeholder="Informe a preferência da comunicação" class="form-control"
+                    #inputPreferencia="ngModel" name="inputPreferencia" [(ngModel)]="comunicacao.preferencia">
+            </div>
         </div>
-        <div class="form-group col-md-6">
-            <label for="inputPreferencia" class="form-control-label">Preferência</label>
-            <input type="text" placeholder="Informe a preferência da comunicação"
-                class="form-control"
-                #inputPreferencia="ngModel"
-                name="inputPreferencia"
-                [(ngModel)]="comunicacao.preferencia">
-        </div>
-    </div>
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label for="inputDetalhe">Detalhe</label>
-            <input type="text" placeholder="Informe o detalhe da comunicação"
-                class="form-control"
-                #inputDetalhe="ngModel"
-                name="inputDetalhe"
-                [(ngModel)]="comunicacao.detalhe">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputDetalhe">Detalhe</label>
+                <input type="text" placeholder="Informe o detalhe da comunicação" class="form-control" #inputDetalhe="ngModel"
+                    name="inputDetalhe" [(ngModel)]="comunicacao.detalhe">
 
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputUso" class="form-control-label">Uso</label>
+                <input type="text" placeholder="Informe o uso da comunicação" class="form-control" #inputUso="ngModel"
+                    name="inputUso" [(ngModel)]="comunicacao.uso">
+            </div>
         </div>
-        <div class="form-group col-md-6">
-            <label for="inputUso" class="form-control-label">Uso</label>
-            <input type="text" placeholder="Informe o uso da comunicação"
-                class="form-control"
-                #inputUso="ngModel"
-                name="inputUso"
-                [(ngModel)]="comunicacao.uso">
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-12 text-center">
-        <button type="submit" class="btn btn-success" >Salvar</button>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-success pull-right">Adicionar</button>
+            </div>
         </div>
-    </div>
+    </fieldset>
 </form>

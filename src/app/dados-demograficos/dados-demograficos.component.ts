@@ -41,6 +41,9 @@ export class DadosDemograficosComponent implements OnInit {
 
   constructor(private dadosDemograficosService:DadosDemograficosService) {
     this.dadosDemograficos = new DadosDemograficos();
+    this.dadosDemograficos.sexo = null;
+    this.dadosDemograficos.raca = null;
+    this.dadosDemograficos.situacaoFamiliar = null;
   }
 
   ngOnInit() {

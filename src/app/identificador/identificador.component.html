@@ -1,31 +1,24 @@
-<h2>Identificador</h2>
-
 <form (ngSubmit)="onSubmit()" #identificadorForm="ngForm" novalidate>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputTipo">Tipo</label>
-      <select id="inputTipo"
-        class="form-control"
-        #inputTipo='ngModel'
-        name='inputTipo'
-        [(ngModel)]="identificador.tipo">
-        <option disabled selected value="null"> -- Selecione -- </option>
-        <option value="1">Certidão</option>          
-        <option value="2">CTPS</option>
-        <option value="3">Título eleitoral</option>
-      </select>
-    </div>
-    <div class="form-group col-md-6">
-        <label for="inputNumero" class="form-control-label">Número</label>
-        <input type="text" placeholder="Informe o número do documento selecionado"
-            class="form-control"
-            #inputNumero="ngModel"
-            name="inputNumero"
-            [(ngModel)]="identificador.numero">
-    </div>
-  </div>
+  <fieldset>
+    <legend class="sub-title-page">Identificador</legend>
 
-  <div *ngIf="identificador.tipo == 1" class="form-row">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputTipo">Tipo</label>
+        <select id="inputTipo" class="form-control" #inputTipo='ngModel' name='inputTipo' [(ngModel)]="identificador.tipo">
+          <option disabled selected value="null"> -- Selecione -- </option>
+          <option value="1">Certidão</option>
+          <option value="2">CTPS</option>
+          <option value="3">Título eleitoral</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputNumero" class="form-control-label">Número</label>
+        <input type="text" class="form-control" #inputNumero="ngModel" name="inputNumero" [(ngModel)]="identificador.numero">
+      </div>
+    </div>
+
+    <div *ngIf="identificador.tipo == 1" class="form-row">
       <div class="form-group col-md-2">
         <label for="iddocumentoCertidao">Certidão</label>
         <select id="iddocumentoCertidao" class="form-control">
@@ -34,152 +27,109 @@
           <option value="C">Casamento</option>
           <option value="D">Divórcio</option>
         </select>
-      </div>  
-      
-      <div class="form-group col-md-10">
-      <label for="inputCartorio">Cartório</label>
-      <input type="text" placeholder="O nome do cartório que emitiu a certidão"
-          class="form-control"   
-          #inputCartorio="ngModel"
-          name="inputCartorio"
-          [(ngModel)]="identificador.cartorio">
-    </div>
-  </div>
+      </div>
 
-  <div *ngIf="identificador.tipo == 1" class="form-row">
+      <div class="form-group col-md-10">
+        <label for="inputCartorio">Cartório</label>
+        <input type="text" class="form-control" #inputCartorio="ngModel" name="inputCartorio" [(ngModel)]="identificador.cartorio">
+      </div>
+    </div>
+
+    <div *ngIf="identificador.tipo == 1" class="form-row">
       <div class="form-group col-md-6">
-          <label for="inputLivro">Livro</label>
-          <input type="text" placeholder="Número do livro no qual foi feito o registro da certidão no cartório"
-              class="form-control"   
-              #inputLivro="ngModel"
-              name="inputLivro"
-              [(ngModel)]="identificador.livro">
-      </div>  
+        <label for="inputLivro">Livro</label>
+        <input type="text" class="form-control" #inputLivro="ngModel" name="inputLivro" [(ngModel)]="identificador.livro">
+      </div>
       <div class="form-group col-md-2">
-          <label for="inputFolha">Folha</label>
-          <input type="text" placeholder="Número da folha do livro no qual foi feito o registro da certidão no cartório"
-              class="form-control"   
-              #inputFolha="ngModel"
-              name="inputFolha"
-              [(ngModel)]="identificador.folha">
+        <label for="inputFolha">Folha</label>
+        <input type="text" class="form-control" #inputFolha="ngModel" name="inputFolha" [(ngModel)]="identificador.folha">
       </div>
       <div class="form-group col-md-4">
-          <label for="inputTermo">Termo</label>
-          <input type="text" placeholder="Número da certidão constante no livro no qual foi lavrada a certidão no cartório"
-              class="form-control"   
-              #inputTermo="ngModel"
-              name="inputTermo"
-              [(ngModel)]="identificador.termo">
+        <label for="inputTermo">Termo</label>
+        <input type="text" class="form-control" #inputTermo="ngModel" name="inputTermo" [(ngModel)]="identificador.termo">
       </div>
-    </div>  
+    </div>
 
     <div *ngIf="identificador.tipo == 2" class="form-row">
       <div class="form-group col-md-6">
-          <label for="inputSerie">Serie</label>
-          <input type="text" placeholder="Número da série da CTPS"
-              class="form-control"   
-              #inputSerie="ngModel"
-              name="inputSerie"
-              [(ngModel)]="identificador.serie">
-      </div>  
-      <div class="form-group col-md-6">
-          <label for="idEstado">Estado</label>
-          <select id="idEstado" class="form-control">
-            <option disabled selected value="null"> -- Selecione -- </option>
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AM">Amazonas</option>
-            <option value="AP">Amapá</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="PR">Paraná</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SE">Sergipe</option>
-            <option value="SP">São Paulo</option>
-            <option value="TO">Tocantins</option>
-          </select>
+        <label for="inputSerie">Serie</label>
+        <input type="text" class="form-control" #inputSerie="ngModel" name="inputSerie" [(ngModel)]="identificador.serie">
       </div>
-    </div>    
-
-    <div *ngIf="identificador.tipo == 3" class="form-row">
       <div class="form-group col-md-6">
-          <label for="inputSecao">Seção</label>
-          <input type="text" placeholder="Número da seção eleitoral do título de eleitor"
-              class="form-control"   
-              #inputSecao="ngModel"
-              name="inputSecao"
-              [(ngModel)]="identificador.secao">
-      </div>  
-      <div class="form-group col-md-6">
-          <label for="inputZona">Zona</label>
-          <input type="text" placeholder="Número da zona eleitoral do título de eleitor"
-              class="form-control"   
-              #inputZona="ngModel"
-              name="inputZona"
-              [(ngModel)]="identificador.zona">
+        <label for="idEstado">Estado</label>
+        <select id="idEstado" class="form-control">
+          <option disabled selected value="null"> -- Selecione -- </option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AM">Amazonas</option>
+          <option value="AP">Amapá</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="PR">Paraná</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SE">Sergipe</option>
+          <option value="SP">São Paulo</option>
+          <option value="TO">Tocantins</option>
+        </select>
       </div>
     </div>
 
-  <div class="form-group">
-    <label for="inputDesignacao">Designação</label>
-    <input type="text" placeholder="Número ou código atribuído a uma pessoa por uma organização"
-        class="form-control"
-        #inputDesignacao='ngModel'
-        name="inputDesignacao"
-        [(ngModel)]="identificador.designacao">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-4">
+    <div *ngIf="identificador.tipo == 3" class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputSecao">Seção</label>
+        <input type="text" class="form-control" #inputSecao="ngModel" name="inputSecao" [(ngModel)]="identificador.secao">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputZona">Zona</label>
+        <input type="text" class="form-control" #inputZona="ngModel" name="inputZona" [(ngModel)]="identificador.zona">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputDesignacao">Designação</label>
+      <input type="text" class="form-control" #inputDesignacao='ngModel' name="inputDesignacao" [(ngModel)]="identificador.designacao">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
         <label for="inputArea">Área Geográfica</label>
-        <select id="inputDocumento"
-          class="form-control"
-          #inputArea='ngModel'
-          name='inputArea'
-          [(ngModel)]="identificador.area">
+        <select id="inputDocumento" class="form-control" #inputArea='ngModel' name='inputArea' [(ngModel)]="identificador.area">
           <option disabled selected value="null"> -- Selecione -- </option>
-          <option value="1">Sujeito Local</option>          
+          <option value="1">Sujeito Local</option>
           <option value="2">Área, Região ou Distrito</option>
           <option value="3">Estado, Província ou Território</option>
           <option value="4">Nacional</option>
         </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputEmissor">Emissor</label>
+        <input type="text" class="form-control" #inputEmissor="ngModel" name="inputEmissor" [(ngModel)]="identificador.emissor">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="idData">Data</label>
+        <input type="text" class="form-control" id="idData">
+      </div>
     </div>
-    <div class="form-group col-md-4">
-      <label for="inputEmissor">Emissor</label>
-      <input type="text" placeholder="Organização que aloca uma designação do identificador de um indivíduo"
-          class="form-control"
-          #inputEmissor="ngModel"
-          name="inputEmissor"
-          [(ngModel)]="identificador.emissor">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="idData">Data</label>
-      <input type="text" placeholder="A data na qual foi emitido o documento de identificação do indivíduo"
-         class="form-control" id="idData" >
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-12 text-center">
-        <button type="submit" class="btn btn-success" >Salvar</button>
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" class="btn pull-right btn-success">Adicionar</button>
+      </div>
     </div>
-  </div>
-
-  
-
+  </fieldset>
 </form>

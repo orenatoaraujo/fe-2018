@@ -24,12 +24,9 @@
           <label>Sexo</label>
 
           <select class="form-control" name="dadosDemograficos.sexo" [(ngModel)]="dadosDemograficos.sexo">
-            <option [value]="sexoMasculino">
-              Masculino
-            </option>
-            <option [value]="sexoFeminino">
-              Feminino
-            </option>
+            <option value="null">-- Selecione --</option>
+            <option [value]="sexoMasculino">Masculino</option>
+            <option [value]="sexoFeminino">Feminino</option>
           </select>
         </div>
       </div>
@@ -38,6 +35,7 @@
         <div class="form-group">
           <label>Raça/cor</label>
           <select class="form-control" name="dadosDemograficos.raca" [(ngModel)]="dadosDemograficos.raca">
+            <option value="null">-- Selecione --</option>
             <option [value]="raca.id" *ngFor="let raca of racaList">
               {{ raca.title }}
             </option>
@@ -49,6 +47,7 @@
         <div class="form-group">
           <label>Situação familiar</label>
           <select class="form-control" name="dadosDemograficos.situacaoFamiliar" [(ngModel)]="dadosDemograficos.situacaoFamiliar">
+            <option value="null">-- Selecione --</option>
             <option [value]="situacaoFamiliar.id" *ngFor="let situacaoFamiliar of situacaoFamiliarList">
               {{ situacaoFamiliar.title }}
             </option>

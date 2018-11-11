@@ -86,6 +86,17 @@ main .btn {
 }
 
 
+/* btn-actions */
+
+.btn-actions {
+    margin: 0 -9px;
+}
+
+.btn-actions .btn {
+    margin: 0 9px;
+}
+
+
 /* Margins */
 
 .mt-10 {
